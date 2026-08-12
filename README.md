@@ -1,19 +1,29 @@
-# 🛡️ Hệ thống Phát hiện Website Phishing
+# 🛡️ Phishing Website Detection ML
 
-Đồ án ứng dụng Machine Learning để phân loại và phát hiện các trang web lừa đảo (Phishing) so với các trang web hợp pháp (Legitimate).
+Hệ thống Phát hiện Trang web Lừa đảo (Phishing) tự động sử dụng Machine Learning, kết hợp Trích xuất đặc trưng trực tiếp (Live Feature Extraction) và Trí tuệ nhân tạo có thể giải thích (Explainable AI - XAI).
 
-## 🚀 Công nghệ sử dụng
-*   **Ngôn ngữ:** Python
-*   **Thuật toán Machine Learning:** Random Forest Classifier (Đạt độ chính xác 96.79%)
-*   **Giao diện Web Demo:** Streamlit
-*   **Thư viện xử lý dữ liệu:** Pandas, Scikit-learn
+## ✨ Tính năng nổi bật
+- **🔍 Phân tích URL Trực tiếp (Live Scanner):** Tự động cào mã nguồn HTML và tra cứu thông tin tên miền (WHOIS) để trích xuất 31 đặc trưng an ninh mạng theo thời gian thực từ một URL bất kỳ.
+- **🤖 Machine Learning:** Sử dụng thuật toán `Random Forest Classifier` đạt độ chính xác lên đến **97%**.
+- **📊 Trí tuệ nhân tạo có thể giải thích (XAI):** Tích hợp thư viện `SHAP` vẽ biểu đồ thác nước (Waterfall plot) giải thích minh bạch lý do AI kết luận trang web là An toàn hay Lừa đảo.
+- **💻 Giao diện Web Trực quan:** Xây dựng bằng `Streamlit` thân thiện, dễ sử dụng cho người dùng cuối.
 
-## ⚙️ Cấu trúc thư mục
-*   `main.py`: Mã nguồn tiến hành chia tập dữ liệu, huấn luyện mô hình và in ra báo cáo đánh giá (Classification Report).
-*   `app.py`: Mã nguồn xây dựng giao diện Web UI bằng Streamlit.
-*   `phishing_model.pkl`: Mô hình AI đã được huấn luyện thành công và lưu lại.
-*   `phishing_data.csv`: Bộ dữ liệu (Dataset) đã được trích xuất 31 đặc trưng.
+## 🛠️ Công nghệ sử dụng
+- **Ngôn ngữ:** Python
+- **Machine Learning:** Scikit-learn, Pandas, NumPy
+- **Explainable AI:** SHAP, Matplotlib
+- **Web Scraping & Network:** BeautifulSoup4, Requests, Python-whois
+- **Giao diện (Frontend):** Streamlit
 
-## 💻 Cách chạy Demo
-1. Cài đặt các thư viện cần thiết: `pip install pandas scikit-learn streamlit joblib`
-2. Khởi chạy giao diện web: `streamlit run app.py`
+## 🚀 Hướng dẫn cài đặt và sử dụng (Local)
+
+1. Clone repository này về máy:
+   ```bash
+   git clone [https://github.com/tranngoctam13/Phishing-Website-Detection-ML.git](https://github.com/tranngoctam13/Phishing-Website-Detection-ML.git)
+
+
+
+ 1.  Cài đặt các thư viện cần thiết:
+pip install -r requirements.txt
+2. Chạy giao diện Web:
+   streamlit run app.py
